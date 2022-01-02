@@ -5,7 +5,6 @@ import com.example.simple.library.web.dto.request.BookSaveInfo;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Collection;
-import java.util.HashSet;
 import java.util.Objects;
 
 @Entity
@@ -26,9 +25,9 @@ public class Book implements Serializable {
     private TemporalProperties temporalProperties;
 
     @OneToOne(
-        mappedBy = "book",
-        orphanRemoval = true,
-        cascade = CascadeType.ALL
+            mappedBy = "book",
+            orphanRemoval = true,
+            cascade = CascadeType.ALL
     )
     private BookMeta bookMeta;
 

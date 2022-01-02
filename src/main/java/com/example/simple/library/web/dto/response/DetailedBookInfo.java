@@ -12,7 +12,8 @@ public class DetailedBookInfo extends MinimalBookInfo implements Serializable {
 
     private List<MinimalAppUserInfo> borrowers;
 
-    public DetailedBookInfo() {}
+    public DetailedBookInfo() {
+    }
 
     public DetailedBookInfo(Book book) {
         super(book);

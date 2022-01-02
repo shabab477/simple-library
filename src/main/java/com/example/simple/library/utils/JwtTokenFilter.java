@@ -1,6 +1,5 @@
 package com.example.simple.library.utils;
 
-import com.example.simple.library.services.AppUserService;
 import com.example.simple.library.services.AuthService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -46,7 +45,7 @@ public class JwtTokenFilter extends OncePerRequestFilter {
         }
 
         UserDetails userDetails = appUserService
-                            .loadUserByUsername(jwtTokenHelper.getEmailFromToken(token));
+                .loadUserByUsername(jwtTokenHelper.getEmailFromToken(token));
 
         UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(
                 userDetails, null,

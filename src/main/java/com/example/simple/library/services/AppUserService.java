@@ -87,7 +87,7 @@ public class AppUserService {
     @Transactional
     public AppUser issueBookToAppUser(Principal principal, int bookId) {
 
-        User loggedInUser = (User)(((UsernamePasswordAuthenticationToken) principal).getPrincipal());
+        User loggedInUser = (User) (((UsernamePasswordAuthenticationToken) principal).getPrincipal());
 
         int loggedInUserId = userRepository.findAppUserByEmail(loggedInUser.getUsername()).orElseThrow().getId();
 

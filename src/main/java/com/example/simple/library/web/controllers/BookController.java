@@ -1,6 +1,5 @@
 package com.example.simple.library.web.controllers;
 
-import com.example.simple.library.entities.AppUser;
 import com.example.simple.library.entities.Book;
 import com.example.simple.library.services.BookService;
 import com.example.simple.library.web.dto.request.BookSaveInfo;

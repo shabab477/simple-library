@@ -1,15 +1,12 @@
 package com.example.simple.library.entities;
 
 import com.example.simple.library.web.dto.request.AppUserSaveInfo;
-import org.hibernate.annotations.NaturalId;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Collection;
-import java.util.Date;
 import java.util.Objects;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 import static com.example.simple.library.utils.Constants.BORROWED_LIMIT;
 
@@ -48,7 +45,8 @@ public class AppUser implements Serializable {
                     name = "book_id", referencedColumnName = "id"))
     private Set<Book> borrowedBooks;
 
-    public AppUser(){}
+    public AppUser() {
+    }
 
     public AppUser(AppUserSaveInfo saveInfo) {
         this.temporalProperties = new TemporalProperties();

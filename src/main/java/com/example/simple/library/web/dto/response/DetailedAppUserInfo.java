@@ -12,7 +12,8 @@ public class DetailedAppUserInfo extends MinimalAppUserInfo implements Serializa
 
     private List<BookInfo> borrowedBooks;
 
-    public DetailedAppUserInfo() {}
+    public DetailedAppUserInfo() {
+    }
 
     public DetailedAppUserInfo(AppUser appUser) {
         super(appUser);

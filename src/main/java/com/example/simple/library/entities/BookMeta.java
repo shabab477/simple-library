@@ -31,7 +31,8 @@ public class BookMeta implements Serializable {
     @JoinColumn(name = "book_id")
     private Book book;
 
-    public BookMeta() {}
+    public BookMeta() {
+    }
 
     public BookMeta(Book book, BookSaveInfo saveInfo) {
         this.book = book;

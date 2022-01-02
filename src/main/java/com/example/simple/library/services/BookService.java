@@ -68,7 +68,7 @@ public class BookService {
     @Transactional
     public Book submitBook(Principal principal, int bookId) {
 
-        User loggedInUser = (User)(((UsernamePasswordAuthenticationToken) principal).getPrincipal());
+        User loggedInUser = (User) (((UsernamePasswordAuthenticationToken) principal).getPrincipal());
 
         AppUser loggedInAppUser = userRepository.findAppUserByEmail(loggedInUser.getUsername()).orElseThrow();
 
