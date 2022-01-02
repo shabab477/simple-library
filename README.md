@@ -35,5 +35,8 @@
 - clone repo
 - `./gradlew clean build`
 - docker build -t java-app .
-- docker-compose up
+- docker-compose up. Port 8080 is exposed
+
+### Postman import
+- Export file is [here](https://github.com/shabab477/simple-library/blob/master/simple-library.postman_collection.json)
 
